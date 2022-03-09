@@ -63,13 +63,155 @@
 //	return 0;
 //}
 
-int i;
-int main()
-{
-	i--;
-	if (i > sizeof(i))
-		printf(">\n");
-	else
-		printf("<\n");
-	return 0;
-}
+//int i;//全局变量 - 不初始化 - 默认是0
+//int main()
+//{
+//	i--;
+//	//-1
+//	//10000000000000000000000000000001
+//	//11111111111111111111111111111110
+//	//11111111111111111111111111111111
+//	if (i > sizeof(i))//sizeof() - 计算变量/类型所占内存的大小 >=0 无符号数
+//		printf(">\n");
+//	else
+//		printf("<\n");
+//	return 0;
+//}
+
+////统计一个属二进制(补码)中1的个数
+//#include <stdlib.h> 
+////int count_bit_one(unsigned int n)
+////{
+////	int count = 0;
+////	while (n)
+////	{
+////		if (n % 2 == 1)
+////		{
+////			count++;
+////		}
+////		n = n / 2;
+////	}
+////	return count;
+////}
+////int count_bit_one(int n)
+////{
+////	int count = 0;
+////	int i = 0;
+////	for (i = 0; i < 32; i++)
+////	{
+////		if ((1 & (n>>i)) == 1)
+////		{
+////			count++;
+////		}
+////	}
+////	return count;
+////}
+//int count_bit_one(int n)
+//{
+//	int count = 0;
+//	while (n)
+//	{
+//		n = n & (n - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	int count = count_bit_one(a);
+//	printf("count = %d\n", count);
+//	//system("pause");//system库函数 - 执行系统命令 - 暂停
+//	return 0;
+//}
+
+//int get_diff_bit(int m,int n)
+//{
+//	int tmp = m ^ n;
+//	int count = 0;
+//	while (tmp)
+//	{
+//		tmp = tmp & (tmp - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d%d", &a,&b);
+//	int count = get_diff_bit(a, b);
+//	printf("count = %d", count);
+//	return 0;
+//	
+//}
+
+//void print(int m)
+//{
+//	int i = 0;
+//	printf("奇数位\n");
+//	for (i = 30; i >= 0; i-=2)
+//	{
+//		printf("%d ", (m >> i) & 1);
+//		//奇数位
+//	}
+//	printf("\n");
+//	printf("偶数位\n");
+//	for (i = 31; i >= 0; i -= 2)
+//	{
+//		printf("%d ", (m >> i) & 1);
+//		//偶数位
+//	}
+//}
+//
+//int main()
+//{
+//	int m = 0;
+//	scanf("%d", &m);
+//	print(m);
+//	return 0;
+//}
+
+//void print(int* p, int sz)
+//{
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d", *(p + i));
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	print(arr, sz);
+//
+//	return 0;
+//}
+
+//void print_table(int n)
+//{
+//	int i = 0;
+//	for (i = 1; i <= n; i++)
+//	{
+//		int j = 0;
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%-3d ", i, j, i * j);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	print_table(n);
+//	return 0;
+//}
